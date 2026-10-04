@@ -28,9 +28,18 @@ npm start
 # open http://localhost:3000
 ```
 
+## Tests
+```bash
+npm test
+```
+Six API tests (Node.js test runner) start the server and check every endpoint, including the status codes and the
+balance after adding and deleting a transaction. They run on every push in
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml).
+
 ## Pipeline
 See [`.github/workflows/azure-webapp-deploy.yml`](.github/workflows/azure-webapp-deploy.yml).
-The workflow is set to **manual run** in this copy, because the Azure secrets belong to the original lab subscription.
+The deployment workflow is set to **manual run** in this copy, because the Azure secrets belong to the original lab
+subscription.
 
 ## Credits
 The API code is based on Microsoft's open-source *App Service Hello World* sample and the *Web Dev For Beginners* bank API (MIT License — see [`LICENSE`](LICENSE) and [`MICROSOFT_SAMPLE_README.md`](MICROSOFT_SAMPLE_README.md)).
